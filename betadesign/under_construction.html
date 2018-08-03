@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from webredox.net/demo/html/betadesign/under_construction.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 02:41:53 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Under Construction</title>
+	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/dest/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/dest/css/under-construction.min.css">
+	<link rel="stylesheet" title="style" href="assets/dest/css/style.css">
+	<link rel="stylesheet" href="assets/dest/css/animate.css">
+	<link rel="stylesheet" href="assets/dest/css/styleswitcher.css">
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="green" href="assets/dest/css/green.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="lightblue" href="assets/dest/css/lightblue.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="orange" href="assets/dest/css/orange.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="yellow" href="assets/dest/css/yellow.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="red" href="assets/dest/css/red.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="color-5" href="assets/dest/css/color-5.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="color-6" href="assets/dest/css/color-6.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="color-7" href="assets/dest/css/color-7.css"/>
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="color-8" href="assets/dest/css/color-8.css"/>
+</head>
+<body>
+<div class="beta-under-body">
+<div class="container">
+	
+	<div class="elastic-construction2 col-sm-9">
+		<div class="uc-header">
+			<div class="pull-left auto-width-left">
+				<a href="index.html" id="uc-logo"><img src="assets/dest/images/logo_white.png" alt=""></a>
+			</div>
+			<nav class="pull-right uc-menu auto-width-right">
+				<a href="index.html">Home</a> <span>|</span>
+				<a href="#">About</a> <span>|</span>
+				<a href="#">Contacts</a>
+			</nav>
+		</div>
+		
+		<div class="uc-body2">
+			<h1>We are working hard to finish our amazing new website!</h1>
+			<h5>We are Almost Done...</h5>
+			<div class="space40">&nbsp;</div>
+			<div class="col-sm-8 beta-coming">
+			<div id="uc-countdown2"></div>
+			</div>
+			<div class="space40">&nbsp;</div>
+			<div class="clear"></div>
+			<div class="beta-subscribers  beta-coming">
+				
+				<form action="#">
+					<input class="" type="text" placeholder="Enter your email for subscribe">
+					<button class="" type="submit">Subscribe <i class="fa fa-chevron-right"></i></button>
+				</form>
+				
+			</div>
+		</div>
+		
+	</div>
+	</div>
+	</div>
+	<!-- Color Select Style -->
+      <div id="style-selector" style="left: -213px;">
+        <div class="style-selector-wrapper">
+         
+          <div>
+            <div class="wrapper-inner">
+            
+              
+			  <span class="title-sub2">Choose Your Color</span>
+              <ul class="color_th">
+                <form id="switchform">
+                  
+				<li><a href="#" name="choice" value="red" onClick="chooseStyle('red', 60)"><span class="pre-color-skin1"></span></a></li>
+				<li><a href="#" name="choice" value="green" onClick="chooseStyle('green', 60)"><span class="pre-color-skin2"></span></a></li>
+				<li><a href="#" name="choice" value="lightblue" onClick="chooseStyle('lightblue', 60)"><span class="pre-color-skin4"></span></a></li>
+				<li><a href="#" name="choice" value="orange" onClick="chooseStyle('orange', 60)"><span class="pre-color-skin6"></span></a></li>
+				<li><a href="#" name="choice" value="yellow" onClick="chooseStyle('yellow', 60)"><span class="pre-color-skin5"></span></a></li>
+				<li><a href="#" name="choice" value="color-5" onClick="chooseStyle('color-5', 60)"><span class="pre-color-skin7"></span></a></li>
+				<li><a href="#" name="choice" value="color-6" onClick="chooseStyle('color-6', 60)"><span class="pre-color-skin8"></span></a></li>
+				<li><a href="#" name="choice" value="color-7" onClick="chooseStyle('color-7', 60)"><span class="pre-color-skin9"></span></a></li>
+				<li><a href="#" name="choice" value="color-8" onClick="chooseStyle('color-8', 60)"><span class="pre-color-skin10"></span></a></li>
+								<div class="clear"></div>
+				<li style="width: 100%;text-align: left;font-weight: bold;line-height: 43px;"><a href="#" name="choice" value="style" onClick="chooseStyle('style', 60)"><span class=""></span>Back to default Color</a></li>  
+				
+                 
+                  
+                </form>
+              </ul> <!-- end Predefined Color Skins -->
+              <a href="#" class="close icon-angle-left"></a>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- End Color Select Style -->
+	<script src="assets/dest/js/jquery.js"></script>
+	<script src="assets/dest/vendors/countdown/jquery.plugin.min.js"></script>
+	<script src="assets/dest/vendors/countdown/jquery.countdown.min.js"></script>
+	<script src="assets/dest/js/styleswitcher.js"></script>
+	<!--customjs-->
+	<script>
+		jQuery(function() {
+			var untilDate = new Date("10 10 2015");
+			jQuery('#uc-countdown2').countdown({
+				until: untilDate,
+				padZeroes: true
+			}); 
+		});
+	</script>
+	<script>
+	 jQuery(document).ready(function($) {
+                'use strict';
+				
+// color box
+
+//color
+      jQuery('#style-selector').animate({
+      left: '-213px'
+    });
+
+    jQuery('#style-selector a.close').click(function(e){
+      e.preventDefault();
+      var div = jQuery('#style-selector');
+      if (div.css('left') === '-213px') {
+        jQuery('#style-selector').animate({
+          left: '0'
+        });
+        jQuery(this).removeClass('icon-angle-left');
+        jQuery(this).addClass('icon-angle-right');
+      } else {
+        jQuery('#style-selector').animate({
+          left: '-213px'
+        });
+        jQuery(this).removeClass('icon-angle-right');
+        jQuery(this).addClass('icon-angle-left');
+      }
+    });
+				});
+	</script>
+</body>
+
+<!-- Mirrored from webredox.net/demo/html/betadesign/under_construction.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 02:41:59 GMT -->
+</html>
