@@ -13,4 +13,9 @@
 
 Route::get('/', 'UserController@index')->name('index');
 
+
+Route::name('admin.')->prefix('admin')->group(function(){
+    Route::resource('/category', 'CategoryController');
+});
+
 Auth::routes();

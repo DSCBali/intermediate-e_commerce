@@ -19,7 +19,10 @@ class CategoryController extends Controller
 
         $categoryList = $category->all();
 
-        return view('/');
+        return view('category.index',
+                    [
+                     'categories' => $categoryList
+                    ]);
     }
 
     /**
@@ -50,9 +53,9 @@ class CategoryController extends Controller
             'name' => $request->name
         ];
 
-        $categoryCreate = $category->fill($categorymeta);
+        $categoryCreate = $category->create($categorymeta);
 
-        return redirect()->route('index');
+        return redirect()->route('admin.category.index');
     }
 
     /**
