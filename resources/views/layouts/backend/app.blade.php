@@ -16,6 +16,7 @@
     <title>Elegant Admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Custom CSS -->
     <link href="{{asset('assets/admin/dist/css/style.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/admin/dist/css/main.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -171,6 +172,8 @@
     <script src="http://www.wrappixel.com/demos/admin-templates/elegant-admin/assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
     <script src="{{asset('assets/admin/dist/js/custom.min.js')}}"></script>
+    
+    @stack('scripts')
 </body>
 
 

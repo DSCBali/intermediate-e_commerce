@@ -12,10 +12,17 @@
 */
 
 Route::get('/', 'UserController@index')->name('index');
+Route::get('/items/{id}', 'UserController@show')->name('user.show');
+Route::post('/items/setCart/{id}', 'CartController@setCart')->name('setCart');
 
-
-Route::name('admin.')->prefix('admin')->group(function(){
-    Route::resource('/category', 'CategoryController');
+Route::middleware('auth')->group(function () {
+    Route::name('admin.')->prefix('admin')->group(function () {
+        Route::resource('/category', 'CategoryController');
+        Route::resource('/product', 'ProductController');
+        Route::resource('/seller', 'SellerController');
+        // Route::get('/product', 'ProductController@index')->name('product');
+        // Route::get('/product/create', 'ProductController@create')->name('create');
+    });
 });
 
 Auth::routes();

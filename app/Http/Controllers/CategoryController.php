@@ -19,10 +19,12 @@ class CategoryController extends Controller
 
         $categoryList = $category->all();
 
-        return view('category.index',
+        return view(
+            'category.index',
                     [
                      'categories' => $categoryList
-                    ]);
+                    ]
+        );
     }
 
     /**
@@ -77,7 +79,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Category::find($id);
+        
+        return view('category.edit', ['data' => $data]);
     }
 
     /**
@@ -89,7 +93,16 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|alpha'
+        ]);
+
+        $metaData = [
+            'name' => $request->name
+        ];
+        
+        Category::find($id)->update($metaData);
+        return redirect()->route('admin.category.index');
     }
 
     /**
@@ -100,6 +113,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::find($id)->delete();
+
+        return redirect()->route('admin.category.index');
     }
 }
