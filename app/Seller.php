@@ -26,4 +26,14 @@ class Seller extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     *
+     *
+     * Relation One to Many to Product Table
+     */
+    public function productsFromSeller()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

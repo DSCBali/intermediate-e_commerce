@@ -38,7 +38,14 @@
                                     <tr>
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->name}}</td>
-                                        <td><button type="button" class="btn waves-effect waves-light btn-sm btn-warning">Edit</button> <button type="button" class="btn waves-effect waves-light btn-sm btn-danger">Delete</button></td>
+                                        <td>
+                                            <a href="{{ route('admin.category.edit', ['id' => $category->id]) }}"><button type="button" class="btn waves-effect waves-light btn-sm btn-warning">Edit</button> </a>
+                                            <form class="fix-form" action="{{ route('admin.category.destroy', ['id' => $category->id]) }}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn waves-effect waves-light btn-sm btn-danger">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -49,3 +56,6 @@
     </div>
 </div>
 @endsection
+@push('scripts')
+
+@endpush

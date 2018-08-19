@@ -31,6 +31,12 @@
 	<link rel="alternate stylesheet" type="text/css" media="screen" title="color-8" href="{{ asset('assets/css/color-8.css') }}"/>
 </head>
 <body>
+    <pre>
+        debug session
+        <?php 
+            print_r(session('cart'));
+        ?>
+    </pre>
     <div id="app">
         <div id="header">
             <div class="header-top">
@@ -251,6 +257,6 @@
 	<script src="{{asset('assets/js/wow.min.js')}}"></script>
 	<script src="{{asset('assets/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
 	<script src="{{asset('assets/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
-	<script src="{{asset('assets/js/styleswitcher.js')}}"></script>
+    <script src="{{asset('assets/js/styleswitcher.js')}}"></script>
 </body>
 </html>
