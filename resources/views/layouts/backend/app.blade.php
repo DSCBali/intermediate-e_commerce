@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from www.wrappixel.com/demos/admin-templates/elegant-admin/main/pages-blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 02:33:58 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -140,15 +138,6 @@
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer">
-            © 2018 Elegent Admin by wrappixel.com
-        </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->
@@ -156,10 +145,10 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="http://www.wrappixel.com/demos/admin-templates/elegant-admin/assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <script src="{{asset('assets/admin/dist/js/jquery-3.2.1.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="http://www.wrappixel.com/demos/admin-templates/elegant-admin/assets/node_modules/popper/popper.min.js"></script>
-    <script src="http://www.wrappixel.com/demos/admin-templates/elegant-admin/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/admin/dist/js/popper.min.js')}}"></script>
+    <script src="{{asset('assets/admin/dist/js/bootstrap.min.js')}}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="{{asset('assets/admin/dist/js/perfect-scrollbar.jquery.min.js')}}"></script>
     <!--Wave Effects -->
@@ -167,8 +156,8 @@
     <!--Menu sidebar -->
     <script src="{{asset('assets/admin/dist/js/sidebarmenu.js')}}"></script>
     <!--stickey kit -->
-    <script src="http://www.wrappixel.com/demos/admin-templates/elegant-admin/assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="http://www.wrappixel.com/demos/admin-templates/elegant-admin/assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{asset('assets/admin/dist/js/sticky-kit.min.js')}}"></script>
+    <script src="{{asset('assets/admin/dist/js/jquery.sparkline.min.js')}}"></script>
     <!--Custom JavaScript -->
     <script src="{{asset('assets/admin/dist/js/custom.min.js')}}"></script>
 </body>
