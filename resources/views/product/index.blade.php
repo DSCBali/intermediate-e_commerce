@@ -2,15 +2,15 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Category</h4>
+        <h4 class="text-themecolor">Product</h4>
     </div>
     <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item active">Category</li>
+                <li class="breadcrumb-item active">Product</li>
             </ol>
-            <a href="{{route('admin.category.create')}}" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</a>
+            <a href="{{route('admin.product.create')}}" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</a>
         </div>
     </div>
 </div>
@@ -30,20 +30,34 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Weight</th>
+                                        <th>Stock</th>
+                                        <th>Price</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($categories as $category)
+                                    @foreach($products as $product)
                                     <tr>
-                                        <td>{{$category->id}}</td>
-                                        <td>{{$category->name}}</td>
+                                        <td>{{$product->id}}</td>
+                                        <td>{{$product->name}}</td>
                                         <td>
-                                            <a href="{{route('admin.category.edit', ['category' => $category->id])}}">
+                                            @foreach($categories as $category)
+                                                @if($category->id == $product->category_id)
+                                                    {{$category->name}}
+                                                @endif
+                                            @endforeach
+                                        </td>
+                                        <td>{{$product->weight}}</td>
+                                        <td>{{$product->stock}}</td>
+                                        <td>{{$product->price}}</td>
+                                        <td>
+                                            <a href="{{route('admin.product.edit', ['product' => $product->id])}}">
                                                 <button type="button" class="btn waves-effect waves-light btn-sm btn-warning">Edit</button>
                                             </a> 
-                                            <form action="{{route('admin.category.destroy', ['category' => $category->id])}}" method="post" style="display: inline;">
-                                                <!-- <input type="hidden" value="{{$category->id}}" name="id"> -->
+                                            <form action="{{route('admin.product.destroy', ['product' => $product->id])}}" method="post" style="display: inline;">
+                                                <!-- <input type="hidden" value="{{$product->id}}" name="id"> -->
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn waves-effect waves-light btn-sm btn-danger">Delete</button>

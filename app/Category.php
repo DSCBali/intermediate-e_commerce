@@ -14,4 +14,9 @@ class Category extends Model
         'name',
         'product_id'
     ];
+
+    public static function navigate()
+    {
+    	return static::all();
+    }
 }

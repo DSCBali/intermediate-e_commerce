@@ -17,6 +17,11 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
 
+        view()->composer('layouts.app', function ($view)
+        {
+            $view->with('categories', \App\Category::navigate());
+        });
+
     }
 
     /**

@@ -1,6 +1,6 @@
 <aside class="left-sidebar">
     <div class="d-flex no-block nav-text-box align-items-center">
-        <span>Ini Admin</span>
+        <span>Welcome Admin</span>
         <a class="nav-lock waves-effect waves-dark ml-auto hidden-md-down" href="javascript:void(0)"><i class="mdi mdi-toggle-switch"></i></a>
         <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
     </div>
@@ -13,7 +13,7 @@
                 <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-email"></i><span class="hide-menu">Product</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{route('admin.category.index')}}">Category <i class="icon-envelope-open"></i></a></li>
-                        <li><a href="#">Product <i class="ti-layout-media-left-alt"></i></a></li>
+                        <li><a href="{{route('admin.product.index')}}">Product <i class="ti-layout-media-left-alt"></i></a></li>
                     </ul>
                 </li>
              
